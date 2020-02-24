@@ -82,34 +82,36 @@ char *termname = "st-256color";
  */
 unsigned int tabspaces = 4;
 
+/* bg opacity */
+float alpha = 0.8;
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"#263640", // 0 black
-	"#d12f2c", // 1  red
-	"#819400", // 2  green
-	"#b08500", // 3  yellow
-	"#2587cc", // 4  blue
-	"#696ebf", // 5  magenta
-	"#289c93", // 6  cyan
-	"#bfbaac", // 7  white
+	"#3b4252", // 0  black
+	"#bf616a", // 1  red
+	"#a3be8c", // 2  green
+	"#ebcb8b", // 3  yellow
+	"#81a1c1", // 4  blue
+	"#b48ead", // 5  magenta
+	"#88c0d0", // 6  cyan
+	"#e5e9f0", // 7  white
 
 	/* 8 bright colors */
-	"#4a697d", // 8  black
-	"#fa3935", // 9  red
-	"#a4bd00", // 10 green
-	"#b9a400", // 11 yellow
-	"#2ca2f5", // 12 blue
-	"#8086e8", // 13 magenta
-	"#33c5ba", // 14 cyan
-	"#fdf6e3", // 15 white
+	"#4c566a", // 8  black
+	"#bf616a", // 9  red
+	"#a3be8c", // 10 green
+	"#ebcb8b", // 11 yellow
+	"#81a1c1", // 12 blue
+	"#b48ead", // 13 magenta
+	"#8fbcbb", // 14 cyan
+	"#eceff4", // 15 white
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#93a1a1", // 256 foreground
-	"#141c21", // 257 background
-	"#afbfbf", // 258 cursor
+	"#d8dee9", // 256
+	"#2e3440", // 257
 };
 
 
@@ -119,8 +121,8 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 256;
 unsigned int defaultbg = 257;
-static unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 7;
+static unsigned int defaultcs = 256;
+static unsigned int defaultrcs = 8;
 
 /*
  * Default shape of cursor
@@ -129,7 +131,7 @@ static unsigned int defaultrcs = 7;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 6;
+static unsigned int cursorshape = 2;
 
 /*
  * Default columns and rows numbers
